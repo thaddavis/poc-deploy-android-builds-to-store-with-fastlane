@@ -73,15 +73,18 @@ platform :android do
 
     gradle(task: 'clean')
     bump_version_code()
+
+    signing_key = load_json(json_path: "signing-key.json")
+    
     gradle(
       task: "bundle",
       build_type: "Release",
       print_command: false,
       properties: {
-        "android.injected.signing.store.file" => "/Users/a/src/Android/keystore/awesomekey",
-        "android.injected.signing.store.password" => "password",
-        "android.injected.signing.key.alias" => "key0",
-        "android.injected.signing.key.password" => "password",
+        "android.injected.signing.store.file" => signing_key["store_file"],
+        "android.injected.signing.store.password" => signing_key["store_password"],
+        "android.injected.signing.key.alias" => signing_key["key_alias"],
+        "android.injected.signing.key.password" => signing_key["key_password"],
       })
 
     upload_to_play_store
