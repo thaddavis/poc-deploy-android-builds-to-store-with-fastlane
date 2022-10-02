@@ -39,7 +39,7 @@ select service account > Account permision -> Admin
 
 ## Build and Deploy to Google Play Store 
 
-- fastlane android beta - DIDN'T WORK * TODO *
+- fastlane android beta - * TODO - AWAITING PUBLISHING TO CONFIRM FIREBASE APPROACH WORKS AS OF 10-2-2022 *
 - fastlane android deploy - WORKED
 
 ## Reference Material
