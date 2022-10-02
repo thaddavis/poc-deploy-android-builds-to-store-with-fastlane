@@ -56,7 +56,7 @@ select service account > Account permision -> Admin
 
 - Create key (json format) and store in project
 
-# https://firebase.google.com/docs/app-distribution/android/distribute-fastlane?apptype=apk
+- https://firebase.google.com/docs/app-distribution/android/distribute-fastlane?apptype=apk
 
 - Find app id in the firebase console ---> Project Settings > General
 
