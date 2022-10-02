@@ -30,11 +30,25 @@ platform :android do
     # You can also use other beta testing services here
   end
 
+  lane :bump_version_code do
+    path = '../app/build.gradle'
+    re = /versionCode\s+(\d+)/ 
+  
+    s = File.read(path)
+    versionCode = s[re, 1].to_i
+    s[re, 1] = (versionCode + 1).to_s
+  
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     # gradle(task: "clean assembleRelease")
 
     gradle(task: 'clean')
+    bump_version_code()
     gradle(
       task: "bundle",
       build_type: "Release",
