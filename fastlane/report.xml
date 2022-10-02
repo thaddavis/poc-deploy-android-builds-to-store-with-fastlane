@@ -5,32 +5,34 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000337">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000534">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: clean" time="1.560407">
+      <testcase classname="fastlane.lanes" name="1: clean" time="1.173763">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to android bump_version_code lane" time="0.000298">
+      <testcase classname="fastlane.lanes" name="2: Switch to android bump_version_code lane" time="0.0003">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: load_json" time="0.000924">
+      <testcase classname="fastlane.lanes" name="3: load_json" time="0.000508">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: bundleRelease" time="7.616288">
+      <testcase classname="fastlane.lanes" name="4: bundleRelease" time="5.628848">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: upload_to_play_store" time="25.624879">
+      <testcase classname="fastlane.lanes" name="5: upload_to_play_store" time="3.780409">
+        
+          <failure message="/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:229:in `chdir&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:229:in `execute_action&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing&apos;&#10;Fastfile:90:in `block (2 levels) in parsing_binding&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/lane.rb:33:in `call&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:49:in `block in execute&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:45:in `chdir&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:45:in `execute&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/commander-4.6.0/lib/commander/command.rb:187:in `call&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/commander-4.6.0/lib/commander/command.rb:157:in `run&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:354:in `run&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:43:in `start&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/gems/fastlane-2.210.1/bin/fastlane:23:in `&lt;top (required)&gt;&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/bin/fastlane:25:in `load&apos;&#10;/usr/local/Cellar/fastlane/2.210.1/libexec/bin/fastlane:25:in `&lt;main&gt;&apos;&#10;&#10;Google Api Error: Invalid request - The Android App Bundle was signed with the wrong key. Found: SHA1: 12:72:54:A7:EA:7D:42:4D:DC:19:E6:3C:96:8E:F2:14:A6:BC:F9:B9, expected: SHA1: 7C:39:78:86:34:D7:1C:A0:7B:E9:4E:12:76:E0:EC:35:75:4A:98:E7." />
         
       </testcase>
     
