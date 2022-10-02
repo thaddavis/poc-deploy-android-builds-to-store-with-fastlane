@@ -21,13 +21,37 @@ platform :android do
     gradle(task: "test")
   end
 
-  desc "Submit a new Beta Build to Crashlytics Beta"
-  lane :beta do
-    gradle(task: "clean assembleRelease")
-    crashlytics
+  desc "Submit a new QA Build to Testers"
+  lane :qa do
+    gradle(task: 'clean')
+    bump_version_code()
+    gradle(
+      task: "bundle",
+      build_type: "Debug",
+      print_command: false
+    )
+    
+    ###---
+    ##- Option 1 - Firebase App Distribution
+    ###---
+    # https://firebase.google.com/docs/app-distribution/android/distribute-fastlane?apptype=apk
+    # firebase_app_distribution(
+    #   app: "1:451705007039:android:d8eb265918e34f59694f0a",
+    #   android_artifact_type: 'AAB',
+    #   android_artifact_path: 'app/build/outputs/bundle/debug/app-debug.aab',
+    #   testers: "thadduval.lavud@gmail.com",
+    #   release_notes: "Lots of amazing new features to test out!",
+    #   service_credentials_file: 'test-track-364314-b563af9c795c.json'
+    # )
   
-    # sh "your_script.sh"
-    # You can also use other beta testing services here
+    ###---
+    ##- Option 2 - upload_to_play_store on internal testing track
+    ###---
+    
+    # TODO
+    # Step 1 ) Upload Build to S3
+    # Step 2 ) Notify on Slack with https://github.com/cieslakdawid/fastlane-plugin-slack_upload?
+
   end
 
   lane :bump_version_code do

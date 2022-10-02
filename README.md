@@ -41,3 +41,23 @@ select service account > Account permision -> Admin
 
 - fastlane android beta - DIDN'T WORK * TODO *
 - fastlane android deploy - WORKED
+
+## Reference Material
+
+- https://firebase.google.com/docs/app-distribution/android/distribute-fastlane?apptype=apk#manage
+
+## Debugging the test release lane
+
+- https://firebase.google.com/docs/android/setup#console
+    - create a firebase project for the project for the test track
+    - Add Firebase to your Android app 
+
+- Create a project with a service account that has the following roles added: Firebase Products > Firebase App Distribution Admin
+
+- Create key (json format) and store in project
+
+# https://firebase.google.com/docs/app-distribution/android/distribute-fastlane?apptype=apk
+
+- Find app id in the firebase console ---> Project Settings > General
+
+- Error "This project is not linked to a Google Play account." ---> Project Settings > Integrations > Google Play
